@@ -1,9 +1,10 @@
 Git How-To
 
 Working with GitHub on VS Code
-	1. Clone the Repo: gh repo clone SkyTruth/fpsos
+	1. Clone the Repo: gh repo clone USER/REPO_NAME
+		ex. cjthomas730/environment
 		- Nav to ~/GitHub then clone
-	2. Made a new venv, fxo_env, with conda
+	2. Make a new venv, ENV_NAME, with conda
 	
 	3. To begin work, activate the venv, nav to project Directory
 
@@ -40,7 +41,6 @@ Bringing Changes from main into the current branch
 Helpful Alias Commands I've made
         1. alias g-add="git add"
         2. alias g-com="git commit -m"
-
 
 
 Other Helpful Stuff
