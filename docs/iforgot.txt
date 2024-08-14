@@ -31,6 +31,15 @@ Red (Soviet):						#CE1A01
 Lilac:							#D8B9FF
 
 
+BASH / ZSH SCRIPT CREATION AND EXECUTION
+========================================================================================================================
+Creating bash/zsh script, pt 1:				touch file.sh
+Creating bash/zsh script, pt 2:				add "#!/bin/zsh" or "#!/bin/bash" as first line
+Creating bash/zsh script, pt 3:				After writing, make executable: chmod +x ~/PATH/file.sh
+Creating bash/zsh script, pt 4:				Make file available in each session: echo "source ~/path/file.sh" >> ~/.zshrc
+Creating bash/zsh script, pt 5:				Refresh source (aas)
+
+
 WORK
 ========================================================================================================================
 JIRA Ticket URL:					https://skytruth.atlassian.net/browse/TECH-####

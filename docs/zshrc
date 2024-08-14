@@ -10,23 +10,6 @@ source ~/.alias
 # Set the terminal style
 export PS1="%B%F{226}%m%f%b %F{214}%n%f: %F{255}%1~$%f "
 
-# Create New Folders with colored icons 
-mkdir_r() {
-    cp -R ~/PATH/TO/Folder_Templates/Red ./"$1"
-}
-
-mkdir_p() {
-    cp -R ~/PATH/TO/Folder_Templates/Pink ./"$1"
-}
-mkdir_g() {
-    cp -R ~/PATH/TO/Folder_Templates/Green ./"$1"
-}
-mkdir_o() {
-    cp -R ~/PATH/TO/Folder_Templates/Orange ./"$1"
-}
-mkdir_y() {
-    cp -R ~/PATH/TO/Folder_Templates/Yellow ./"$1"
-}
 
 # ======================================================================================================================
 # # Browser Search Options
