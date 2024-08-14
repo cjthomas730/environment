@@ -2,3 +2,4 @@
 - [ ] Create standard zshrc doc
 - [ ] create setup.py file to handle installs
 - [ ] create terminal prompt/color profile (see zshrc)
+- [ ] Populate README.md

@@ -2,3 +2,9 @@ Standard list of programs and packages to install
 	- Sublime Text
 	- Obsidian
 	- VS Code
+	- Homebrew (Mac only)
+	- Conda
+	- git
+	- Fira Code (font)
+	- zsh
+	- QGIS (work only)
