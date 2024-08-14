@@ -3,3 +3,5 @@
 - [ ] create setup.py file to handle installs
 - [ ] create terminal prompt/color profile (see zshrc)
 - [ ] Populate README.md
+- [ ] Add search functions for firefox to zshrc
+- [ ] Re-work directories section of zshrc to be a bash script

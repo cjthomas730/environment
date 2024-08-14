@@ -51,6 +51,9 @@ alias grep="grep -i --color=auto"
 alias egrep="egrep -i --color=auto"
 alias fgrep="fgrep -i --color=auto"
 
+# Colorized alternative to cat
+alias ccat="pygmentize -g"
+
 # Make directories as needed, including all intermediate directories.
 alias mkdir="mkdir -p"
 
