@@ -1,0 +1,64 @@
+#!/bin/zsh
+
+# Arc Browser Search and Tabs, room to improve the incognito functions
+google_search() {
+    local query=$(echo "$*" | sed 's/ /+/g')
+    osascript -e "tell application \"Arc\"
+        make new tab with properties {URL:\"https://google.com/search?q=$query\"}
+        activate
+    end tell"
+}
+
+gs() {
+    local query=$(echo "$*" | sed 's/ /+/g')
+    osascript -e "tell application \"Arc\"
+        make new tab with properties {URL:\"https://google.com/search?q=$query\"}
+        activate
+    end tell"
+}
+
+youtube_search() {
+    local query=$(echo "$*" | sed 's/ /+/g')
+    osascript -e "tell application \"Arc\"
+        make new tab with properties {URL:\"https://youtube.com/results?search_query=$query\"}
+        activate
+    end tell"
+}
+
+# Ask ChatGPT a question
+chatGPT() {
+    local query=$(echo "$*" | sed 's/ /+/g')
+    osascript -e "tell application \"Arc\"
+        make new tab with properties {URL:\"https://chat.openai.com/chat?q=$query\"}
+        activate
+    end tell"
+}
+
+arc_incog() {
+    osascript -e 'tell application "Arc"
+      make new window with properties {incognito:true}
+      activate
+    end tell'
+}
+
+# =====================================================================================================================
+# # Search Input on Google, in Chrome
+# google_search() {
+#     open -n -a "Google Chrome" --args "--new-tab" "https://google.com/search?q=$*"
+# }
+# # Search Input on Google, in Chrome in an Incognito tab
+# google_search_incog() {
+#     open -n -a "Google Chrome" --args "--incognito" "--new-tab" "https://google.com/search?q=$*"
+# }  
+# # Search Input on YouTube, in Chrome
+# youtube_search() {
+#     open -n -a "Google Chrome" --args "--new-tab" "https://youtube.com/results?search_query=$*"
+# }
+# # Search Input on YouTube, in Chrome in an incognito tab
+# youtube_search_incog() {
+#     open -n -a "Google Chrome" --args "--incognito"  "--new-tab" "https://youtube.com/results?search_query=$*"
+# }
+# # Ask ChatGPT a question
+# chatGPT() {
+#     open -n -a "Google Chrome" --args "--new-tab" "https://chat.openai.com/chat?q=$*"
+# }
