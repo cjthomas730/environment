@@ -1,0 +1,48 @@
+GENERAL
+========================================================================================================================
+Markdown Link Syntax:					[link text](htttp://www.url-website.con)
+For Loop Syntax:					for f in foo*.pattern; do mv "$f" "${f/%.pattern/.replace}"; done
+SHP to GeoJSON:						for f in *.shp; do ogr2ogr -f "GeoJSON" ${f%.shp}.geojson ${f}; done
+Inspiration:						https://bit.ly/3VBvsIq
+Int and Float:						Int = 0  / Float = 0.0
+Make conda venv:					conda create --name ENV_NAME python=VERSION (e.g. 3.11.8)
+Activate conda venv: 					conda activate ENV_NAME
+Deactivate cond venv:					conda deactivate
+GitHub Help:						run ghelp or git_help
+Python Dictionary:					{"a":1, "b":2, "c":3}
+Python Array:						["a", "b", "c"]
+Python name/main:					if __name__ == "__main__": FUNCTION()
+Zed Settings:						See https://zed.dev/docs/configuring-zed
+Zed ENV:						See https://zed.dev/docs/python
+Poetry Run Command:					poetry run python -m script_name (do not include .py)
+GEE Output Folder:					EE_Output
+Zipping Directories:					"zip -r" or "zip_dir" + "INDIR.zip INDIR"
+Google Command Line Search:				"google_search SEARCH-TERM", defined in .zshrc
+Google Command Line Search, Incognito Tab:		"google_search_incog SEARCH-TERM", defined in .zshrc
+YouTube Command Line Search:				"youtube_search SEARCH-TERM", defined in .zshrc
+YouTube Command Line Search, Incognito Tab:		"youtube_search_incog SEARCH-TERM", defined in .zshrc
+ChatGPT Command Line:					"chatGPT ask a question", defined in .zshrc
+BigQuery (BQ) Table Join: 				SELECT a.*, b.* FROM `table_a` AS a JOIN `table_b` AS b ON a.MATCH_ID = b.MATCH_ID
+Obsidian Vault CSS Location:				Vault/.obsidian/snippets/ct_obsidian.css
+Copy output of command line to clipboard:		[COMMAND] | pBcopy	>> ex. pwd | pbcopy  ; cat file.txt | grep search term | pbcopy
+
+Favorite Color Info (Hex Codes)
+Red (Soviet):						#CE1A01
+Lilac:							#D8B9FF
+
+
+WORK
+========================================================================================================================
+JIRA Ticket URL:					https://skytruth.atlassian.net/browse/TECH-####
+
+Copy from GCS with gsutil to Currennt Dir:		gsutil -m cp "gs://PATH/TO/FILE-1" "gs://PATH/TO/FILE-2" [...] .
+Copy from GCS with gsutil to Currennt Dir with alias: 	gscp (OR gs_cp) "gs://PATH/TO/FILE-1" "gs://PATH/TO/FILE-2" [...] .
+GCS Standard Path - MTM:				gs://mountaintop_mining/
+GCS Standard Path - Open Ocean:				gs://open-ocean-project/
+GCS Standard Path - Inambari:				gs://inambari/
+
+MTM Information
+Recovery Metric, SS (Steady State / Equilibrium):	the expected value sites will recover to post-mining
+Recovery Metric, b0 (Initial Recovery):			the max rate of recovery when the metric is 0
+Recovery Metric, b1 (Late Recovery):			the max rate of recovery when the metric is approaching the expected steady-state
+

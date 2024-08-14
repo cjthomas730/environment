@@ -1,0 +1,130 @@
+# ======================================================================================================================
+# # Alias Related
+# Edit the alias file
+alias aa="nano ~/.alias"
+alias ae="nano ~/.alias"
+
+# Refresh the .alias and load changes
+alias aas="source ~/.alias"
+alias ar="source ~/.alias"
+
+# Read the alias file
+alias read_alias="cat ~/.alias"
+
+# Edit or Read the Log file (assumes it is in ~/Documents), and that Sublime Text is installed
+alias log_edit="subl ~/Documents/log.txt -n"
+alias log_read="cat ~/Documents/log.txt"
+
+# ======================================================================================================================
+# # Navigation Shortcuts - Standard Directories
+# Home
+alias home="cd ~"
+alias Home="cd ~"
+
+# Desktop
+alias dt="cd ~/Desktop/"
+alias desk="cd ~/Desktop/"
+alias Desk="cd ~/Desktop/"
+
+# Documents
+alias doc="cd ~/Documents/"
+alias Doc="cd ~/Documents/"
+
+# Downloads
+alias dl="cd ~/Downloads/"
+alias downloads="cd ~/Downloads/"
+alias Downloads="cd ~/Downloads/"
+
+# Root
+alias root="cd /"
+
+# # Navigation Shortcuts - Moving around
+alias .1="cd ../"
+alias .2="cd ../../"
+alias .3="cd ../../../"
+alias .4="cd ../../../../"
+
+# ======================================================================================================================
+# # Improving standard functions
+# Colorize the grep output
+alias grep="grep -i --color=auto"
+alias egrep="egrep -i --color=auto"
+alias fgrep="fgrep -i --color=auto"
+
+# Make directories as needed, including all intermediate directories.
+alias mkdir="mkdir -p"
+
+# Unzip all zip files in a directory
+alias unpack="unzip '*.zip'"
+
+# Zip Directories
+alias zip_dir="zip -r"
+
+# Remove all zip files in a directory
+alias rmzip="rm *.zip"
+
+# Clear the terminal prompt
+alias clr="clear"
+alias cclr="clear"
+alias clre="clear"
+
+# Ask for permission before removing files
+alias s_rm="rm -i"
+
+# List all files, alphabetically
+alias ls-a="ls -A"
+
+# List Files and Directories in the current directory with their size
+alias lu="du -sh * | sort -h"
+
+# Count the number of files in a directory
+alias count_files="ls | wc -l"
+
+# Read the iforgot file
+alias iforgot="cat ~/Documents/iforgot.txt"
+
+# ======================================================================================================================
+# # Git Related
+# Read the gitHelp file
+alias git_help="cat ~/Documents/gitHelp.txt"
+alias ghelp="cat ~/Documents/gitHelp.txt"
+
+# Git Shortcuts
+alias g-add="git add"
+alias g-com="git commit -m"
+
+# ======================================================================================================================
+# # Virtual Environment Management
+# Activate Virtual Environment (made with conda)
+alias vactivate="conda activate venv"
+
+# Deactivate an active conda Virtual Environment
+alias c_deac="conda deactivate"
+
+# ======================================================================================================================
+# # Random, silly stuff
+# Get the Weather (in Shepherdstown)
+alias weather="curl https://wttr.in/Shepherdstown"
+
+# Matrix Terminal (only if cmatrix installed)
+# alias matrix="cmatrix -b -s"
+
+# ======================================================================================================================
+# # Mac Specific
+# Toggle hidden file visibility in the Finder (eg .test)
+alias hidden_on="defaults write com.apple.finder AppleShowAllFiles YES"
+alias hidden_off="defaults write com.apple.finder AppleShowAllFiles NO"
+
+# brew update && brew upgrade && brew cleanup && brew doctor
+alias brew_up="brew update && brew upgrade && brew cleanup && brew doctor"
+alias brew_updoc="brew update && brew upgrade && brew cleanup && brew doctor"
+
+# Remove everything in the .Trash directory
+alias take_out_the_trash="rm -rf ~/.Trash/*"
+alias tott="rm -rf ~/.Trash/*"
+
+# Navigate to Volumes
+alias vol="cd /Volumes/"
+alias Vol="cd /Volumes/"
+alias volumes="cd /Volumes/"
+alias Volumes="cd /Volumes/"
