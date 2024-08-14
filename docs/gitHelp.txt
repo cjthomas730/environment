@@ -1,0 +1,48 @@
+Git How-To
+
+Working with GitHub on VS Code
+	1. Clone the Repo: gh repo clone SkyTruth/fpsos
+		- Nav to ~/GitHub then clone
+	2. Made a new venv, fxo_env, with conda
+	
+	3. To begin work, activate the venv, nav to project Directory
+
+	Branches
+	4. Check current branch with: "git status"
+	5. Make new branch with: "git branch BRANCH-NAME"
+	6. Switch to branch with: "git switch BRANCH-NAME"
+
+	7. Work on branch
+	8. Add changes to code to a future push with git add FILENAME
+		- ex. changes made to requirements.txt >> git add requirements.txt
+	9. Commit the change with a message using "git commit -m "Messge here...." "
+		- ex. git commit -m "Updated the requirements.txt to include selenium" 
+	10. Push the branch back to main when ready
+		- git push --set-upstream origin BRANCH-NAME
+
+	Pull Request
+	11. Go to the GitHub project page to make the pull request
+	12. After PR finished, Squash and Merge
+
+	Update Repo
+	13. Switch back to main branch
+	14. Make sure local repo is up-to-date with a git pull
+		- git pull
+	15. After the PR is done, remove remote branches from local Git if they don't still exist
+		- git fetch --prune
+
+Bringing Changes from main into the current branch
+	1. git checkout <main-branch>
+	2. git pull
+	3. git checkout <branch>
+	4. git merge <main-branch>
+
+Helpful Alias Commands I've made
+        1. alias g-add="git add"
+        2. alias g-com="git commit -m"
+
+
+
+Other Helpful Stuff
+	- https://docs.google.com/presentation/d/1vptyRL_V7yDTgXX1omxEhvhxyg87I8kHjl6rM2Cu48c/edit?usp=sharing	
+

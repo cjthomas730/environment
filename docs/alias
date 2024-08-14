@@ -1,0 +1,178 @@
+# # Edit the alias file
+alias aa="nano ~/.alias"
+alias ae="nano ~/.alias"
+
+# # Refresh the .alias and load changes
+alias aas="source ~/.alias"
+alias ar="source ~/.alias"
+
+# Read the alias file
+alias read_alias="cat ~/.alias"
+
+# Edit or Read the Log file (assumes it is in ~/Documents), and that Sublime Text is installed
+alias log_edit="subl ~/Documents/log.txt -n"
+alias log_read="cat ~/Documents/log.txt"
+
+# # Navigation Shortcuts - Standard Directories
+# Home
+alias home="cd ~"
+alias Home="cd ~"
+
+# Desktop
+alias dt="cd ~/Desktop/"
+alias desk="cd ~/Desktop/"
+alias Desk="cd ~/Desktop/"
+
+# Documents
+alias doc="cd ~/Documents/"
+alias Doc="cd ~/Documents/"
+
+# Downloads
+alias dl="cd ~/Downloads/"
+alias downloads="cd ~/Downloads/"
+alias Downloads="cd ~/Downloads/"
+
+# Volumes
+alias vol="cd /Volumes/"
+alias Vol="cd /Volumes/"
+alias volumes="cd /Volumes/"
+alias Volumes="cd /Volumes/"
+
+# Root
+alias root="cd /"
+
+# # Navigation Shortcuts - Moving around
+alias .1="cd ../"
+alias .2="cd ../../"
+alias .3="cd ../../../"
+alias .4="cd ../../../../"
+
+
+# # Improving standard functions
+# Colorize the grep output
+alias grep="grep -i --color=auto"
+alias egrep="egrep -i --color=auto"
+alias fgrep="fgrep -i --color=auto"
+
+# Make directories as needed, including all intermediate directories.
+alias mkdir="mkdir -p"
+
+# Unzip all zip files in a directory
+alias unpack="unzip '*.zip'"
+
+# Zip Directories
+alias zip_dir="zip -r"
+
+# Remove all zip files in a directory
+alias rmzip="rm *.zip"
+
+# Clear the terminal prompt
+alias clr="clear"
+alias cclr="clear"
+alias clre="clear"
+
+# Ask for permission before removing files
+alias s_rm="rm -i"
+
+# Remove everything in the .Trash directory
+alias take_out_the_trash="rm -rf ~/.Trash/*"
+alias tott="rm -rf ~/.Trash/*"
+
+# List all files, alphabetically
+alias ls-a="ls -A"
+
+# List Files and Directories in the current directory with their size
+alias lu="du -sh * | sort -h"
+
+# Count the number of files in a directory
+alias count_files="ls | wc -l"
+
+# Read the iforgot file
+alias iforgot="cat ~/Documents/iforgot.txt"
+
+# Read the gitHelp file
+alias git_help="cat ~/Documents/gitHelp.txt"
+alias ghelp="cat ~/Documents/gitHelp.txt"
+
+# Git Shortcuts
+alias g-add="git add"
+alias g-com="git commit -m"
+
+# Copy files from GCS, add files to copy in "" end with outpath
+alias gscp="gsutil -m cp "
+alias gs_cp="gsutil -m cp "
+
+# # Random, silly stuff
+# Get the Weather
+alias weather="curl https://wttr.in/Shepherdstown"
+
+# Matrix Terminal
+alias matrix="cmatrix -b -s"
+
+# ======================================================================================================================
+# # Work or Mac Specific
+# Toggle hidden file visibility in the Finder (eg .test)
+alias hidden_on="defaults write com.apple.finder AppleShowAllFiles YES"
+alias hidden_off="defaults write com.apple.finder AppleShowAllFiles NO"
+
+# brew update && brew upgrade && brew cleanup && brew doctor
+alias brew_up="brew update && brew upgrade && brew cleanup && brew doctor"
+alias brew_updoc="brew update && brew upgrade && brew cleanup && brew doctor"
+
+# Open a new QGIS instance
+alias nq="open ~/../../Applications/QGIS.app -n"
+alias newq="open ~/../../Applications/QGIS.app -n"
+
+# Open SNAP Application
+# alias snap="open ~/../../Applications/snap/bin/snap.app"
+
+# Activate Virtual Environment (made with conda)
+alias vactivate="conda activate venv"
+alias vactivate_cerulean="conda activate cerulean-cloud"
+alias vactivate_geenv="conda activate gee_env"
+alias vactivate_inbenv="conda activate inb_env"
+alias vactivate_oo="conda activate oo_env"
+alias vactivate_fxo="conda activate fxo_env"
+alias vactivate_ct="conda activate ct_env"
+
+# Deactivate an active conda Virtual Environment
+alias c_deac="conda deactivate"
+
+# Check GEE credentials
+alias cred_ee="cat ~/.config/earthengine/credentials"
+
+# Open the skytruth-tech project, for use with Inambari and MTM automation
+alias gct='gcloud compute ssh --zone "us-east4-a" "tech"  --project "skytruth-tech"'
+alias gcloud_tech='gcloud compute ssh --zone "us-east4-a" "tech"  --project "skytruth-tech"'
+
+# Set gcloud-projects
+alias gcloud_set_tech='gcloud config set project skytruth-tech'
+alias gcloud_set_cerulean='gcloud config set project cerulean-338116'
+alias gcloud_set_gfw='gcloud config set project world-fishing-827'
+
+# Access CV2 Staging
+alias join_cv2_staging="~/git/cerulean-cloud/cloud-sql-proxy --address 0.0.0.0 --port 1235 cerulean-338116:europe-west1:cerulean-cloud-staging-database-instance-d599ba7"
+
+# Access CV2 Test
+alias join_cv2_test="~/git/cerulean-cloud/cloud-sql-proxy --address 0.0.0.0 --port 1234 cerulean-338116:europe-west1:cerulean-cloud-test-database-instance-172289b"
+
+# GDAL & RASTERIO Commands and Creation Option abbreviations
+# alias gdalPolygonize='python3 /usr/local/bin/gdal_polygonize.py'
+# alias gdalPolygonize='python3 /usr/local/Cellar/gdal/3.2.0/lib/python3.9/site-packages/osgeo/utils/gdal_polygonize.py'
+
+# alias gdalPolygonize_v2='python3 /usr/local/Cellar/gdal/3.2.0/bin/gdal_polygonize.py'
+# alias gdalCalc='python3 /usr/local/bin/gdal_calc.py'
+# alias gdalMerge='python3 /usr/local/bin/gdal_merge.py'
+
+alias vv='gdalwarp *-vv-*.tiff -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+alias vh='gdalwarp *-vh-*.tiff -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+
+alias s2_rgb='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B04.jp2 *_B03.jp2 *_B02.jp2'
+alias l8_rgb='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B4.TIF *_B3.TIF *_B2.TIF'       
+
+# For processing imagery in photoshop
+alias s2_ps_fc='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B12.jp2 *_B08.jp2 *_B03.jp2'
+
+# Still Debugging Creation Options
+alias -g g_co='-co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+alias -g r_co='--co TILED=YES --co COMPRESS=DEFLATE --co INTERLEAVE=BAND --co PREDICTOR=2'

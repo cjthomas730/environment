@@ -1,0 +1,4 @@
+Standard list of programs and packages to install
+	- Sublime Text
+	- Obsidian
+	- VS Code

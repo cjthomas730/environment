@@ -1,0 +1,19 @@
+# # Aliases for standard geospatial data processing
+
+# GDAL & RASTERIO Commands and Creation Option abbreviations
+alias vv='gdalwarp *-vv-*.tiff -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+alias vh='gdalwarp *-vh-*.tiff -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+
+alias s2_rgb='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B04.jp2 *_B03.jp2 *_B02.jp2'
+alias l8_rgb='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B4.TIF *_B3.TIF *_B2.TIF'       
+
+# For processing imagery in photoshop
+alias s2_ps_fc='gdal_merge.py -separate -co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2 *_B12.jp2 *_B08.jp2 *_B03.jp2'
+
+# Still Debugging Creation Options
+alias -g g_co='-co TILED=YES -co COMPRESS=DEFLATE -co INTERLEAVE=BAND -co PREDICTOR=2'
+alias -g r_co='--co TILED=YES --co COMPRESS=DEFLATE --co INTERLEAVE=BAND --co PREDICTOR=2'
+
+# Copy files from GCS, add files to copy in "" end with outpath
+alias gscp="gsutil -m cp "
+alias gs_cp="gsutil -m cp "
