@@ -1,0 +1,67 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ],
+    "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "notebook.output.scrolling": true,
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.inheritEnv": false,
+    "python.createEnvironment.trigger": "off",
+    "notebook.lineNumbers": "on",
+    "terminal.integrated.defaultProfile.linux": "",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "json.schemas": [
+        
+
+
+
+    ],
+    "files.readonlyInclude": {
+        "/.cargo/registry/src//*.rs": true,
+        "/lib/rustlib/src/rust/library//*.rs":true,
+    },
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14
+}
+
+
+Name: Black Formatter
+Id: ms-python.black-formatter
+Description: Formatting support for Python files using the Black formatter.
+Version: 2024.2.0
+Publisher: Microsoft
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+
+Name: Jupytext for Notebooks (congyiwu)
+Id: congyiwu.vscode-jupytext
+Description: Open, edit and execute plain script files (Python, R, Julia, TypeScript, C#, etc) as Jupyter Notebooks.  Soft fork of donjayamanne.vscode-jupytext
+Version: 0.1.2
+Publisher: congyiwu
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=congyiwu.vscode-jupytext
+
+Name: Rainbow CSV
+Id: mechatroner.rainbow-csv
+Description: Highlight CSV and TSV files, Run SQL-like queries
+Version: 3.12.0
+Publisher: mechatroner
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv
+
+Name: rust-analyzer
+Id: rust-lang.rust-analyzer
+Description: Rust language support for Visual Studio Code
+Version: 0.3.2121
+Publisher: The Rust Programming Language 
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
+
+Name: Jupyter
+Id: ms-toolsai.jupyter
+Description: Jupyter notebook support, interactive programming and computing that supports Intellisense, debugging and more.
+Version: 2024.8.1
+Publisher: Microsoft
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter
