@@ -5,6 +5,7 @@ Standard list of programs and packages to install
 	- Homebrew (Mac only)
 	- Conda
 	- git
-	- Fira Code (font)
+	- Fira Code (font) : https://github.com/tonsky/FiraCode
 	- zsh
-	- QGIS (work only)
+	- ohmyzsh : https://ohmyz.sh/#install
+	- QGIS (work only) : https://www.qgis.org/resources/installation-guide/
