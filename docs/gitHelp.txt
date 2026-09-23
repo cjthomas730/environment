@@ -1,48 +1,86 @@
 Git How-To
+(Christian's basic guide to working with Git)
+		
 
-Working with GitHub on VS Code
-	1. Clone the Repo: gh repo clone USER/REPO_NAME
-		ex. cjthomas730/environment
-		- Nav to ~/GitHub then clone
-	2. Make a new venv, ENV_NAME, with conda
-	
-	3. To begin work, activate the venv, nav to project Directory
+CLONING A REPOSITORY
+Navigate to the directory where you wish to clone the repo. 
+	ex. cd ~/GitHub
 
-	Branches
-	4. Check current branch with: "git status"
-	5. Make new branch with: "git branch BRANCH-NAME"
-	6. Switch to branch with: "git switch BRANCH-NAME"
+1a. Using Git: git clone git@github.com:ORGANIZATION/REPO_NAME.git
+	ex. git clone git@github.com:SkyTruth/mtm
 
-	7. Work on branch
-	8. Add changes to code to a future push with git add FILENAME
-		- ex. changes made to requirements.txt >> git add requirements.txt
-	9. Commit the change with a message using "git commit -m "Messge here...." "
-		- ex. git commit -m "Updated the requirements.txt to include selenium" 
-	10. Push the branch back to main when ready
-		- git push --set-upstream origin BRANCH-NAME
+1b. Using GitHub CLI (if installed): gh repo clone ORGANIZATION/REPO_NAME
+	ex. gh repo clone SkyTruth/mt
 
-	Pull Request
-	11. Go to the GitHub project page to make the pull request
-	12. After PR finished, Squash and Merge
 
-	Update Repo
-	13. Switch back to main branch
-	14. Make sure local repo is up-to-date with a git pull
-		- git pull
-	15. After the PR is done, remove remote branches from local Git if they don't still exist
-		- git fetch --prune
+OPTIONAL: VIRTUAL ENVIRONMENTS
+These are not related to git, and may not be required or wanted based on the project. 
+1. Make a new venv (with conda and setting python version to 3.14)
+	ex. conda creaete --name VENV_NAME python=3.14
 
-Bringing Changes from main into the current branch
-	1. git checkout <main-branch>
-	2. git pull
-	3. git checkout <branch>
-	4. git merge <main-branch>
+2. To begin work, activate the venv, nav to project Directory
 
-Helpful Alias Commands I've made
+
+BRANCH MANAGEMENT
+1. Check current branch with: git status
+	- to check all available branches: git branch -a
+
+2a. Make new branch and switch to it with: git switch -c BRANCH-NAME
+
+2b. Make new branch and stay on current branch with: git branch BRANCH-NAME
+
+3. Change to an existing branch: git switch BRANCH-NAME
+
+
+WORKFLOW
+1. Work on branch
+
+2. Stage Chages. To add changes to a future push with: git add FILENAME
+	ex. changes made to requirements.txt >> git add requirements.txt
+
+3. Commit the change with a message: git commit -m "Message here...."
+   This saves staged changes. Message should be descriptive
+	ex. git commit -m "Updated the requirements.txt to include selenium" 
+
+4. Push the branch back to remote: git push --set-upstream origin BRANCH-NAME 
+   This is a way to backup current progress on a branch AND to prep for a Pull Request. 
+   It this backs up progress on the current local branch (BRANCH-NAME) to the remote 
+   branch sharing that name, and links them. "--set-upstream origin BRANCH-NAME" only 
+   needs to be included for the first time pushing a branch, afterwords only "git push" 
+   is needed.
+
+
+PULL REQUESTS
+When the work on the branch is finalized and ready to be incorporated into the main 
+branch of the repo, open a pull request so the code can be reviewed.
+1. Go to the GitHub project page to make the pull request
+2. After the PR is approved, from the GitHub page run:Squash and Merge
+3. Post-PR, delete the remote branch from the local branch:
+	3a. git fetch --prune
+	3b. git branch -D BRANCH-NAME
+
+
+UPDATE THE LOCAL REPO
+1. Switch to the main branch: git switch main
+
+2. Make sure local repo is up-to-date with: git pull
+
+
+BRING CHANGES FROM MAIN TO THE CURRENT BRANCH
+	1. git fetch origin
+	2. git merge origin/<main-branch>
+		--> if conflicts exist: fix the files, then git add + git commit 
+		--> to exit a merge conflict: git merge --abort
+	3. Back-up updated branch to remote: git push 
+
+
+MISCELLANEA
+Alias Commands I've made, if you're inclined to add them to your own .alias file
         1. alias g-add="git add"
         2. alias g-com="git commit -m"
 
 
-Other Helpful Stuff
-	- https://docs.google.com/presentation/d/1vptyRL_V7yDTgXX1omxEhvhxyg87I8kHjl6rM2Cu48c/edit?usp=sharing	
-
+Other Helpful Materials
+	1. Git and GitHub Presentation (Will): https://docs.google.com/presentation/d/1gRBaYkbyINAaWXoy3_hkD7U2dLRmPhLQY-Y5XVrO5iI/edit?slide=id.g3ec27626388_0_250#slide=id.g3ec27626388_0_250
+		- older presentation (Suzy): https://docs.google.com/presentation/d/1vptyRL_V7yDTgXX1omxEhvhxyg87I8kHjl6rM2Cu48c/edit?usp=sharing
+	2. Another Git Cheat Sheet: https://docs.google.com/document/d/1D44JSu--DvxXESsTgNNzdZmvqnMETWZYL--lfkv14Wc/edit?tab=t.0
